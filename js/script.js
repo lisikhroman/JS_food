@@ -560,3 +560,47 @@ Promise.race([test(1000), test(2000)]).then(() => {
 // })
 //     .then(response => response.json())
 //     .then(json => console.log(json));
+
+// Filter
+//     //1
+//     const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemar'];
+//
+//     const shortNames = names.filter(function (names) {
+//         return names.length < 5;
+//     });
+//
+//     console.log(shortNames)
+
+// map
+    //
+    // let answers = ['IvAn', 'AnnA', 'Hello'];
+    //
+    // answers = answers.map(item => item.toLowerCase());
+    // console.log(answers);
+
+//  every & some
+
+// const some = [4, 'qwq', 'sfrefrf'];
+// // console.log(some.some(item => typeof(item) === 'number'));
+//
+// console.log(some.every(item => typeof(item) === 'number'));
+
+// reduce
+
+// const arr = [4, 5, 1, 2, 6];
+//
+// const res = arr.reduce((sum, curent) => sum + curent );
+// console.log(res)
+
+const obj = {
+    ivan: 'persone',
+    ann: 'persone',
+    dog: 'animal',
+    cat: 'animal'
+}
+
+const newArr = Object.entries(obj)
+    .filter(item => item[1] === 'persone')
+    .map(item => item[0]);
+
+console.log(newArr);
