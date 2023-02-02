@@ -532,11 +532,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 //Promise: all race
-const test = time => {
-    return new Promise(resolve => {
-        setTimeout(() => resolve(), time)
-    });
-};
+// const test = time => {
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve(), time)
+//     });
+// };
 
 // test(1000).then(() => console.log('1000 ms'));
 // test(2000).then(() => console.log('2000 ms'));
@@ -545,9 +545,9 @@ const test = time => {
 //     console.log('All')
 // });
 
-Promise.race([test(1000), test(2000)]).then(() => {
-    console.log('All')
-});
+// Promise.race([test(1000), test(2000)]).then(() => {
+//     console.log('All')
+// });
 
 
 //Fetch API
@@ -592,15 +592,19 @@ Promise.race([test(1000), test(2000)]).then(() => {
 // const res = arr.reduce((sum, curent) => sum + curent );
 // console.log(res)
 
-const obj = {
-    ivan: 'persone',
-    ann: 'persone',
-    dog: 'animal',
-    cat: 'animal'
-}
+// const obj = {
+//     ivan: 'persone',
+//     ann: 'persone',
+//     dog: 'animal',
+//     cat: 'animal'
+// }
+//
+// const newArr = Object.entries(obj)
+//     .filter(item => item[1] === 'persone')
+//     .map(item => item[0]);
+//
+// console.log(newArr);
 
-const newArr = Object.entries(obj)
-    .filter(item => item[1] === 'persone')
-    .map(item => item[0]);
-
-console.log(newArr);
+fetch('http://localhost:3000/menu')
+.then(data => data.json())
+.then(res => console.log(res));
